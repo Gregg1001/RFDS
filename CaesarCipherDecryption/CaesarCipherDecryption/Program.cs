@@ -18,6 +18,7 @@
             var outputHandler = new OutputHandler();
 
             // Process input, decryption, and output
+<<<<<<< HEAD
             string? cipherText = inputHandler.GetCipherText();
 
             if (cipherText != null) // Check if user chose to exit
@@ -29,6 +30,11 @@
             {
                 Console.WriteLine("No decryption performed. Program exited by user.");
             }
+=======
+            string cipherText = inputHandler.GetCipherText();
+            string plainText = decryptor.Decrypt(cipherText);
+            outputHandler.DisplayDecryptedMessage(plainText);
+>>>>>>> main
         }
     }
 }

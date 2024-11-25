@@ -8,20 +8,29 @@ namespace CaesarCipherDecryption
     /// </summary>
     public class InputHandler
     {
+<<<<<<< HEAD
         private const string InvalidInputMessage = "Invalid input. Please enter only lowercase alphabetic characters (a-z) with no spaces or special symbols.";
         private const string PromptMessage = "Enter the encrypted message (only lowercase letters allowed), or type 'exit' to quit:";
 
+=======
+>>>>>>> main
         /// <summary>
         /// Prompts the user to enter the encrypted message and validates the input.
         /// Only lowercase alphabetic characters are accepted.
         /// </summary>
+<<<<<<< HEAD
         /// <returns>The validated encrypted message as a string, or null if the user exits.</returns>
         public string? GetCipherText()
+=======
+        /// <returns>The validated encrypted message as a string.</returns>
+        public string GetCipherText()
+>>>>>>> main
         {
             string? input = null;
 
             while (input == null || !IsValidInput(input))
             {
+<<<<<<< HEAD
                 Console.WriteLine(PromptMessage);
                 try
                 {
