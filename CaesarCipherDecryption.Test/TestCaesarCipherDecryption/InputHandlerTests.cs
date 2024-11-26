@@ -3,7 +3,6 @@ using CaesarCipherDecryption;
 using System.IO;
 
 namespace CaesarCipherDecryption.Tests
-
 {
     [TestFixture]
     public class InputHandlerTests
@@ -26,7 +25,7 @@ namespace CaesarCipherDecryption.Tests
             bool isValid = _inputHandler.IsValidInput(validInput);
 
             // Assert
-            Assert.IsTrue(isValid);
+            Assert.That(isValid, Is.True);
         }
 
         [Test]
@@ -39,7 +38,7 @@ namespace CaesarCipherDecryption.Tests
             bool isValid = _inputHandler.IsValidInput(invalidInput);
 
             // Assert
-            Assert.IsFalse(isValid);
+            Assert.That(isValid, Is.False);
         }
 
         [Test]
@@ -52,7 +51,7 @@ namespace CaesarCipherDecryption.Tests
             bool isValid = _inputHandler.IsValidInput(invalidInput);
 
             // Assert
-            Assert.IsFalse(isValid);
+            Assert.That(isValid, Is.False);
         }
 
         [Test]
@@ -65,7 +64,7 @@ namespace CaesarCipherDecryption.Tests
             bool isValid = _inputHandler.IsValidInput(invalidInput);
 
             // Assert
-            Assert.IsFalse(isValid);
+            Assert.That(isValid, Is.False);
         }
 
         [Test]
@@ -78,7 +77,7 @@ namespace CaesarCipherDecryption.Tests
             bool isValid = _inputHandler.IsValidInput(invalidInput);
 
             // Assert
-            Assert.IsFalse(isValid);
+            Assert.That(isValid, Is.False);
         }
 
         [Test]
@@ -93,7 +92,7 @@ namespace CaesarCipherDecryption.Tests
                 string result = _inputHandler.GetCipherText();
 
                 // Assert
-                Assert.AreEqual("abcxyz", result);
+                Assert.That(result, Is.EqualTo("abcxyz"));
             }
         }
 
@@ -110,7 +109,7 @@ namespace CaesarCipherDecryption.Tests
                 string result = _inputHandler.GetCipherText();
 
                 // Assert
-                Assert.AreEqual("abcxyz", result);
+                Assert.That(result, Is.EqualTo("abcxyz"));
             }
         }
     }
